@@ -16,12 +16,12 @@ find_package(OpenCV)
 include_directories(include ${OpenCV_INCLUDE_DIRS})
 
 # add the publisher example
-add_executable(my_publisher src/my_publisher.cpp)
-target_link_libraries(my_publisher ${catkin_LIBRARIES})
+add_executable(picture_publisher src/picture_publisher.cpp)
+target_link_libraries(picture_publisher ${catkin_LIBRARIES})
 
 # add the subscriber example
-add_executable(my_subscriber src/my_subscriber.cpp)
-target_link_libraries(my_subscriber ${catkin_LIBRARIES})
+add_executable(picture_subscriber src/picture_subscriber.cpp)
+target_link_libraries(picture_subscriber ${catkin_LIBRARIES})
 
 # add the plugin examples
 add_library(resized_publisher src/manifest.cpp src/resized_publisher.cpp src/resized_subscriber.cpp)
